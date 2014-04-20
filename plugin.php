@@ -71,7 +71,7 @@ RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
 		nocache_headers();
 		if ( is_user_logged_in() )
 			return;
-		if ( $_SERVER['QUERY_STRING']  = 'feed=rss2' )
+		if ( $_SERVER['QUERY_STRING']  == 'feed=rss2' )
 			return;
 
 		$usr = isset($_SERVER['PHP_AUTH_USER']) ? $_SERVER['PHP_AUTH_USER'] : '';
